@@ -1,13 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios'
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  const [post, setPost] = useState(null);
+  const baseURL = "https://4rlmhiyaoi.execute-api.us-east-1.amazonaws.com/default/datastructures-algorithms";
+
+  React.useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setPost(response.data);
+      console.log(post);
+      console.log(response);
+    });
+  }, []);
+
+  if (!post) return null;
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {post}
         </p>
         <a
           className="App-link"
