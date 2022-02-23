@@ -1,0 +1,26 @@
+div {
+    white-space: pre-wrap;
+    text-align: justify;
+}
+
+#textarea{
+    font-family: monospace;
+    font-size: large;
+    @media print {
+        @page { size: landscape; }
+    }
+}
+
+#solutions{
+    font-family: monospace;
+    font-size: large;
+    padding-left: 5%;
+    height: 100em;
+    overflow-y:auto;
+}
+
+@media print {
+    @page { size: landscape; }
+}
+
+
