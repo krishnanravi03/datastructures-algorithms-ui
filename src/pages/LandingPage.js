@@ -89,9 +89,9 @@ function LandingPage(){
       >
         <CircularProgress color="success" />
       </Backdrop>
-      <Box sx={{ width: 1 }}>
+      <Box sx={{ flexGrow: 1 }}>
       <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}>
-      <Box gridColumn="span 1">
+      <Box gridColumn="span 0.5">
       </Box>
         <Box gridColumn="span 9">
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
